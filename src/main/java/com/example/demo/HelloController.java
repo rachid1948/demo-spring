@@ -13,7 +13,7 @@ public class HelloController {
     @GetMapping("/version")
     public String version() {
         // petite valeur par défaut (on changera à chaque release)
-        String v = System.getenv().getOrDefault("APP_VERSION", "1.1");
+        String v = System.getenv().getOrDefault("APP_VERSION", "1.2");
         return "Demo Spring – version " + v;
     }
 }
