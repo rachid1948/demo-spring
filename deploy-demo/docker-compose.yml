@@ -1,0 +1,9 @@
+services:
+  app:
+    image: ${IMAGE}          # vient de .env (ex: chaouky/demo-spring:latest)
+    container_name: demo1
+    ports:
+      - "${HOST_PORT}:8080"  # 8080 dehors -> 8080 dans le conteneur
+    env_file:
+      - ./app.env            # variables pour l'app (APP_VERSION, profils, etc.)
+    restart: unless-stopped
